@@ -79,6 +79,85 @@
   | assertThrows() |	Se espera que la clase que se va a probar genere una excepción |
 
   Probemos estas aserciones :
+
+  ![image](https://github.com/peg1163/CC3S2/assets/92898224/64f380b3-ac10-4288-9a6d-c0c5f9221f70)
+
+  ![image](https://github.com/peg1163/CC3S2/assets/92898224/62e9c75f-1e08-41b2-9576-e4149dda19bb)
+
+  Asi mismo sus ejecuciones :
+
+  ![image](https://github.com/peg1163/CC3S2/assets/92898224/527c2ff6-0a5d-4519-b3d2-269d5eada36a)
+
+  Probando el metodo asertAll cambiando alguno de las aserciones : 
+
+  ![image](https://github.com/peg1163/CC3S2/assets/92898224/59a99589-22d2-48ba-847b-9e2ea5efb2c0)
+
+  Veremos que es necesario que todas las pruebas pasen para que corra el metodo completo , este es uno de los ejemplos mostrados en el tutorial 
+  para que ejecute el lector .
+
+  ![image](https://github.com/peg1163/CC3S2/assets/92898224/9566c649-b956-43ce-97e0-9336c420b103)
+
+  * Suposiciones
+
+  Las suposiciones en JUnit son condiciones que se deben cumplir para que una prueba se ejecute; si no se cumplen, la prueba se salta sin generar un     
+  fallo. Son utilizadas para verificar condiciones previas antes de ejecutar pruebas y no para verificar el comportamiento real de la aplicación , 
+  veamos algunas de estas : 
+
+  | Asercion | Descripcion |
+  |-------------|-------------|
+  | assumeTrue	| Ejecute el cuerpo de lamda cuando se omita la prueba de retención de condición positiva |
+  | assumeFalse	 | Ejecute el cuerpo de lamda cuando se omita la prueba de retención de condición negativa |
+  | assumingthat |	Parte del método de prueba se ejecutará si una suposición es verdadera y todo lo que sigue a la lambda se ejecutará independientemente de la suposición en el supuesto de que se cumpla That() |
+
+  Algunos ejemplos :
+
+  ![image](https://github.com/peg1163/CC3S2/assets/92898224/66c2979d-9a53-4d94-bec6-fe4b28920b1e)
+
+  ![image](https://github.com/peg1163/CC3S2/assets/92898224/dd87d08f-8ef1-40e9-b541-37cf8697891f)
+
+  Observamos que las ejecuciones , vemos que la prueba de asumir que es sabado no funciona porque cuando se hizo la prueba no era sabado , por lo que 
+  no vemos en la consola : "further code will execute only if above assumption holds true".
+
+  ![image](https://github.com/peg1163/CC3S2/assets/92898224/bda9a0df-6367-4326-8d0c-79f53cf9f9de)
+
+
+  * Pruebas anidadas
+
+  Las pruebas anidadas son una técnica en JUnit donde puedes organizar pruebas dentro de otras pruebas, creando una estructura jerárquica. Esto facilita 
+  la agrupación de pruebas relacionadas y la compartición de preparación y limpieza entre ellas. Ayuda a mantener un código de prueba organizado y 
+  legible.Para esto JUunit utiliza la anotacion @Nested.
+  Veamoslo en un ejemplo :
+
+  ![image](https://github.com/peg1163/CC3S2/assets/92898224/dd1af580-32f8-4f9b-ab7f-5108707753b6)
+
+  ![image](https://github.com/peg1163/CC3S2/assets/92898224/ee14955c-c89c-425f-b0b0-4450e530e130)
+
+  En la ejecucion de estas podemos ver que se logro generar una jerarquia en todos los @Before y @After 
+
+  ![image](https://github.com/peg1163/CC3S2/assets/92898224/508d643c-f970-4c0e-ab13-5e3d6ad96a3f)
+
+  * Excepciones
+
+  Hay situaciones en las que se espera que los métodos arrojen una excepción bajo una condición específica. assertThrows no superará la prueba si el        método dado no produce la excepción especificada.
+
+  Tomemos de ejemplo el codigo usado para aserciones :
+
+  ![image](https://github.com/peg1163/CC3S2/assets/92898224/45a20a40-822a-4855-a033-9785f6f5adde)
+
+
+
+  
+
+  
+
+
+  
+
+  
+  
+
+
+
   
 
   
