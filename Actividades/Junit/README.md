@@ -78,6 +78,10 @@
   | assertTrue(expresión) |	Se produce un error si la expresión no es verdadera |
   | assertThrows() |	Se espera que la clase que se va a probar genere una excepción |
 
+  Probemos estas aserciones :
+  
+
+  
   
 
 
