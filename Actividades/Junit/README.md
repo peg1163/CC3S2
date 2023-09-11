@@ -109,6 +109,48 @@
   | assumeFalse	 | Ejecute el cuerpo de lamda cuando se omita la prueba de retención de condición negativa |
   | assumingthat |	Parte del método de prueba se ejecutará si una suposición es verdadera y todo lo que sigue a la lambda se ejecutará independientemente de la suposición en el supuesto de que se cumpla That() |
 
+  Algunos ejemplos :
+
+  ![image](https://github.com/peg1163/CC3S2/assets/92898224/66c2979d-9a53-4d94-bec6-fe4b28920b1e)
+
+  ![image](https://github.com/peg1163/CC3S2/assets/92898224/dd87d08f-8ef1-40e9-b541-37cf8697891f)
+
+  Observamos que las ejecuciones , vemos que la prueba de asumir que es sabado no funciona porque cuando se hizo la prueba no era sabado , por lo que 
+  no vemos en la consola : "further code will execute only if above assumption holds true".
+
+  ![image](https://github.com/peg1163/CC3S2/assets/92898224/bda9a0df-6367-4326-8d0c-79f53cf9f9de)
+
+
+  * Pruebas anidadas
+
+  Las pruebas anidadas son una técnica en JUnit donde puedes organizar pruebas dentro de otras pruebas, creando una estructura jerárquica. Esto facilita 
+  la agrupación de pruebas relacionadas y la compartición de preparación y limpieza entre ellas. Ayuda a mantener un código de prueba organizado y 
+  legible.Para esto JUunit utiliza la anotacion @Nested.
+  Veamoslo en un ejemplo :
+
+  ![image](https://github.com/peg1163/CC3S2/assets/92898224/dd1af580-32f8-4f9b-ab7f-5108707753b6)
+
+  ![image](https://github.com/peg1163/CC3S2/assets/92898224/ee14955c-c89c-425f-b0b0-4450e530e130)
+
+  En la ejecucion de estas podemos ver que se logro generar una jerarquia en todos los @Before y @After 
+
+  ![image](https://github.com/peg1163/CC3S2/assets/92898224/508d643c-f970-4c0e-ab13-5e3d6ad96a3f)
+
+  * Excepciones
+
+  Hay situaciones en las que se espera que los métodos arrojen una excepción bajo una condición específica. assertThrows no superará la prueba si el        método dado no produce la excepción especificada.
+
+  Tomemos de ejemplo el codigo usado para aserciones :
+
+  ![image](https://github.com/peg1163/CC3S2/assets/92898224/45a20a40-822a-4855-a033-9785f6f5adde)
+
+
+
+  
+
+  
+
+
   
 
   
