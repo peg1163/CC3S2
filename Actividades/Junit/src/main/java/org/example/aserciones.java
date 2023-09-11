@@ -30,7 +30,9 @@ public class aserciones {
                 ()-> assertEquals(str1,"hola"),
                 ()-> assertEquals(str2,"esto es"),
                 ()-> assertEquals(str3,"una asercion")
-        );/*
+
+        );
+        /*
         assertAll(
                 ()-> assertEquals(str1,"hola"),
                 ()-> assertEquals(str2,"esto no es"),
