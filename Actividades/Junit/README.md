@@ -42,16 +42,16 @@
   Una de las nuevas caracteristicas en los componentes de JUnit5 es JUnit Jupiter , que proporciona anotaciones para un mejor entendimiento 
   en las pruebas .Estas anotaciones serian :
 
-  ** @Test	: Denota un método de prueba
-  ** @DisplayName	: Declara un nombre para mostrar personalizado para la clase de prueba o el método de prueba
-  ** @BeforeEach	: Indica que el método anotado debe ejecutarse antes de cada método de prueba
-  ** @AfterEach	: Indica que el método anotado debe ejecutarse después de cada método de prueba
-  ** @BeforeAll	: Indica que el método anotado debe ejecutarse antes que todos los métodos de prueba
-  ** @AfterAll	: Indica que el método anotado debe ejecutarse después de todos los métodos de prueba
-  ** @Disable	: Se usa para deshabilitar una clase de prueba o un método de prueba
-  ** @Nested	: Indica que la clase anotada es una clase de prueba anidada y no estática
-  ** ¡CRB!	: Declarar etiquetas para filtrar pruebas
-  ** @ExtendWith	: Registrar extensiones personalizadas
+  | @Test	| Denota un método de prueba |
+  | @DisplayName	| Declara un nombre para mostrar personalizado para la clase de prueba o el método de prueba |
+  | @BeforeEach	| Indica que el método anotado debe ejecutarse antes de cada método de prueba |
+  | @AfterEach	| Indica que el método anotado debe ejecutarse después de cada método de prueba |
+  | @BeforeAll	| Indica que el método anotado debe ejecutarse antes que todos los métodos de prueba |
+  | @AfterAll	| Indica que el método anotado debe ejecutarse después de todos los métodos de prueba |
+  | @Disable	| Se usa para deshabilitar una clase de prueba o un método de prueba |
+  | @Nested	| Indica que la clase anotada es una clase de prueba anidada y no estática |
+  | ¡CRB!	| Declarar etiquetas para filtrar pruebas |
+  | @ExtendWith	| Registrar extensiones personalizadas |
 
 
   
