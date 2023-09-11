@@ -43,7 +43,7 @@
   Una de las nuevas caracteristicas en los componentes de JUnit5 es JUnit Jupiter , que proporciona anotaciones para un mejor entendimiento 
   en las pruebas .Estas anotaciones serian :
 
-  | Anotacion | Descripcion |
+    | Anotacion | Descripcion |
     |-------------|-------------|
     | @Test	| Denota un método de prueba |
     | @DisplayName	| Declara un nombre para mostrar personalizado para la clase de prueba o el método de prueba |
