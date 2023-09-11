@@ -97,6 +97,18 @@
 
   ![image](https://github.com/peg1163/CC3S2/assets/92898224/9566c649-b956-43ce-97e0-9336c420b103)
 
+  * Suposiciones
+
+  Las suposiciones en JUnit son condiciones que se deben cumplir para que una prueba se ejecute; si no se cumplen, la prueba se salta sin generar un     
+  fallo. Son utilizadas para verificar condiciones previas antes de ejecutar pruebas y no para verificar el comportamiento real de la aplicación , 
+  veamos algunas de estas : 
+
+  | Asercion | Descripcion |
+  |-------------|-------------|
+  | assumeTrue	| Ejecute el cuerpo de lamda cuando se omita la prueba de retención de condición positiva |
+  | assumeFalse	 | Ejecute el cuerpo de lamda cuando se omita la prueba de retención de condición negativa |
+  | assumingthat |	Parte del método de prueba se ejecutará si una suposición es verdadera y todo lo que sigue a la lambda se ejecutará independientemente de la suposición en el supuesto de que se cumpla That() |
+
   
 
   
