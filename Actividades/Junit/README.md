@@ -1,9 +1,9 @@
-# TAREA N1
-## TUTORIAL DE JUNIT :
+# Tarea N1
+## Tutorial de JUnit5 :
 
   Este tutorial nos muestra Junit , el marco de pruebas para el lenguaje de programacion Java.
   
-### ARQUITECTURA DE JUNIT 5  
+### Arquitectura de JUnit5   
   
   Comenzando con las componenetes de JUnit :
   
@@ -17,7 +17,7 @@
   * JUnit Vintage fue creado para garantizar la compatibilidad y migración suave de las pruebas existentes escritas en versiones antiguas
     de JUnit hacia JUnit 5.
 
-### IMPLEMENTACION DE JUNIT 5
+### Implementacion de JUnit5
 
   Pasando a implementarlo a nuestro proyectos , solo es necesario incrementar una dependencia en el archivo xml
 
@@ -35,6 +35,23 @@
   ![image](https://github.com/peg1163/CC3S2/assets/92898224/f5c3f22b-87d4-4c5d-a38e-da410fca306c)
 
   Ya implementado veamos algunas de las nuevas caracteristicas de JUnit5 
+  
+### Nuevas Caracteristicas de JUnit5 
+  
+  * Anotaciones 
+  Una de las nuevas caracteristicas en los componentes de JUnit5 es JUnit Jupiter , que proporciona anotaciones para un mejor entendimiento 
+  en las pruebas .Estas anotaciones serian :
+
+  ** @Test	: Denota un método de prueba
+  ** @DisplayName	: Declara un nombre para mostrar personalizado para la clase de prueba o el método de prueba
+  ** @BeforeEach	: Indica que el método anotado debe ejecutarse antes de cada método de prueba
+  ** @AfterEach	: Indica que el método anotado debe ejecutarse después de cada método de prueba
+  ** @BeforeAll	: Indica que el método anotado debe ejecutarse antes que todos los métodos de prueba
+  ** @AfterAll	: Indica que el método anotado debe ejecutarse después de todos los métodos de prueba
+  ** @Disable	: Se usa para deshabilitar una clase de prueba o un método de prueba
+  ** @Nested	: Indica que la clase anotada es una clase de prueba anidada y no estática
+  ** ¡CRB!	: Declarar etiquetas para filtrar pruebas
+  ** @ExtendWith	: Registrar extensiones personalizadas
 
 
   
