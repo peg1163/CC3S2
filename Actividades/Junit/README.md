@@ -53,8 +53,34 @@
   | @AfterAll	| Indica que el método anotado debe ejecutarse después de todos los métodos de prueba |
   | @Disable	| Se usa para deshabilitar una clase de prueba o un método de prueba |
   | @Nested	| Indica que la clase anotada es una clase de prueba anidada y no estática |
-  | ¡CRB!	| Declarar etiquetas para filtrar pruebas |
   | @ExtendWith	| Registrar extensiones personalizadas |
+
+  Poniendo a prueba estas anotaciones 
+
+  ![image](https://github.com/peg1163/CC3S2/assets/92898224/247f49ca-f4d5-4894-8ae8-f8c78e73f79d)
+
+  La ejecucion nos muestra como estas anotaciones trabajan 
+
+  ![image](https://github.com/peg1163/CC3S2/assets/92898224/f6c27c3b-0d70-4242-ae8b-772f075f0d07)
+
+  * Aserciones
+
+  Las aserciones comparan un resultado reteniendo el programa si devuelve un FALSE , estas aserciones , cuentan con diferentes metodos para 
+  la comparacion :
+
+  | Asercion | Descripcion |
+  |-------------|-------------|
+  | assertEquals(esperado, real)	| Falla cuando esperado no es igual a real |
+  | assertFalse(expresión) |	Se produce un error cuando la expresión no es false | 
+  | assertNull(actual)  |	Se produce un error cuando real no es null |
+  | assertNotNull(actual)	 | Se produce un error cuando real es null |
+  | assertAll() |	Agrupe muchas aserciones y cada aserción se ejecutará incluso si una o más de ellas fallan |
+  | assertTrue(expresión) |	Se produce un error si la expresión no es verdadera |
+  | assertThrows() |	Se espera que la clase que se va a probar genere una excepción |
+
+  
+
+
 
 
   
