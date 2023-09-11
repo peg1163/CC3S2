@@ -26,16 +26,16 @@ public class aserciones {
         String str1 ="hola";
         String str2 ="esto es";
         String str3 ="una asercion";
-        assertAll(
+        /*assertAll(
                 ()-> assertEquals(str1,"hola"),
                 ()-> assertEquals(str2,"esto es"),
                 ()-> assertEquals(str3,"una asercion")
-        );
-        /*assertAll(
+        );*/
+        assertAll(
                 ()-> assertEquals(str1,"hola"),
                 ()-> assertEquals(str2,"esto no es"),
                 ()-> assertEquals(str3,"una asercion")
-        );*/
+        );
     }
     @Test
     void testasertTrue() {
