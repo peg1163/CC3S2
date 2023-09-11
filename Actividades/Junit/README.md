@@ -79,6 +79,31 @@
   | assertThrows() |	Se espera que la clase que se va a probar genere una excepción |
 
   Probemos estas aserciones :
+
+  ![image](https://github.com/peg1163/CC3S2/assets/92898224/64f380b3-ac10-4288-9a6d-c0c5f9221f70)
+
+  ![image](https://github.com/peg1163/CC3S2/assets/92898224/62e9c75f-1e08-41b2-9576-e4149dda19bb)
+
+  Asi mismo sus ejecuciones :
+
+  ![image](https://github.com/peg1163/CC3S2/assets/92898224/527c2ff6-0a5d-4519-b3d2-269d5eada36a)
+
+  Probando el metodo asertAll cambiando alguno de las aserciones : 
+
+  ![image](https://github.com/peg1163/CC3S2/assets/92898224/59a99589-22d2-48ba-847b-9e2ea5efb2c0)
+
+  Veremos que es necesario que todas las pruebas pasen para que corra el metodo completo , este es uno de los ejemplos mostrados en el tutorial 
+  para que ejecute el lector .
+
+  ![image](https://github.com/peg1163/CC3S2/assets/92898224/9566c649-b956-43ce-97e0-9336c420b103)
+
+  
+
+  
+  
+
+
+
   
 
   
