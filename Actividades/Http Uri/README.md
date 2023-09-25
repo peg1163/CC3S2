@@ -8,8 +8,11 @@
 * Pregunta:¿Cuáles son las dos diferencias principales que has visto anteriormente y lo que ves en un navegador web 'normal'? ¿Qué explica estas diferencias?
 
  Respuesta: En este problema nos muestran una pagina donde hay palabras aleatorias ,cada vez que entramos en esta pagina se genera una palabra nueva :
+ 
 ![Alt text](image.png)
-y si cargamos otra vez la pagina aparecera una nueva 
+
+y si cargamos otra vez la pagina aparecera una nueva
+
 ![Alt text](image-1.png)
 
 Ahora entrando desde la terminal , accedemos a la pagina y nos devuelve en texto el html 
@@ -80,13 +83,13 @@ especificamente el error 404 significa que no encuentra la pagina
 ¿Qué otros códigos de error HTTP existen? Utiliza Wikipedia u otro recurso para conocer los significados de algunos de los más comunes: 200, 301, 302, 400, 404, 500. Ten en cuenta que estas son familias de estados: todos los estados 2xx significan funcionó, todos los 3xx son redireccionar etc.
 Tanto el encabezado 4xx como el 5xx indican condiciones de error. ¿Cuál es la principal diferencia entre 4xx y 5xx?.
 
- 2xx:
- Estos códigos indican que la solicitud del cliente se recibió, se comprendió y se procesó correctamente en el servidor.
- 3xx:
- Estos códigos se utilizan para indicar redireccionamientos de URL. Indican que el cliente debe tomar alguna acción adicional para completar la solicitud
- 4xx:
+ 2xx:   
+ Estos códigos indican que la solicitud del cliente se recibió, se comprendió y se procesó correctamente en el servidor.    
+ 3xx:   
+ Estos códigos se utilizan para indicar redireccionamientos de URL. Indican que el cliente debe tomar alguna acción adicional para completar la solicitud   
+ 4xx:   
  Estos errores se generan cuando el servidor recibe una solicitud que no puede procesar debido a problemas en el lado del cliente   
- 5xx:
+ 5xx:   
  Estos errores son generados por el servidor web y generalmente indican problemas en el lado del servidor
 
 ## ¿Que es un cuerpo de Request ?
@@ -107,3 +110,4 @@ ahora cambiando el servidor , si ingresamos algun correo y contraseña y vemos e
 esto quiere decir que la informacion ingresada a sido recibida por el servidor 
 
 * Pregunta:¿Cómo se presenta al servidor la información que ingresó en el formulario? ¿Qué tareas necesitaría realizar un framework SaaS como Sinatra o Rails para presentar esta información en un formato conveniente a una aplicación SaaS escrita, por ejemplo, en Ruby?
+
