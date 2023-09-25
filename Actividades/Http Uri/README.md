@@ -110,4 +110,67 @@ ahora cambiando el servidor , si ingresamos algun correo y contraseña y vemos e
 esto quiere decir que la informacion ingresada a sido recibida por el servidor 
 
 * Pregunta:¿Cómo se presenta al servidor la información que ingresó en el formulario? ¿Qué tareas necesitaría realizar un framework SaaS como Sinatra o Rails para presentar esta información en un formato conveniente a una aplicación SaaS escrita, por ejemplo, en Ruby?
+  Cuando se utiliza el método POST, los datos del formulario se envían en el cuerpo de la solicitud HTTP en lugar de aparecer en la URL como lo es cuando se usa el metodo GET
+
+  ![image](https://github.com/peg1163/CC3S2/assets/92898224/658c2583-cec5-4f56-af1d-4be2fd0cda3b)
+
+* Repite el experimento varias veces para responder las siguientes preguntas observando las diferencias en el resultado impreso por nc:
+
+ ¿Cuál es el efecto de agregar parámetros URI adicionales como parte de la ruta POST?    
+    No tienen efecto alguno ya que los parametros se incluiran en la URL pero los datos que se envian en el metodo POST en el cuerpo de la solicitud POST y no en la URL        
+ ¿Cuál es el efecto de cambiar las propiedades de nombre de los campos del formulario?    
+ Cambiara como se identifican esos campos en el lado del servidor cuando se procesa la solicitud     
+ veamos un ejemplo :    
+ ![image](https://github.com/peg1163/CC3S2/assets/92898224/192e4288-8efe-4a38-ad02-4f1d783c2400)
+
+ inicialmente tenemos estos parametros , ahora cambiandolos :    
+    ![image](https://github.com/peg1163/CC3S2/assets/92898224/7dcc8337-00b6-438f-94c5-6d05afedfdcc)
+
+vemos que en la parte final ya no es password sino passwords 
+ 
+ ¿Puedes tener más de un botón Submit? Si es así, ¿cómo sabe el servidor en cuál se hizo clic? (Sugerencia: experimenta con los atributos de la etiqueta 
+ <submit>).    
+ Sí, puedes tener más de un botón submit en un formulario HTML. Para identificar cuál de los botones se hizo clic, puedes usar el atributo name en los botones y luego verificar cuál de los botones se incluyó en la solicitud HTTP en el lado del servidor
+ veamoslo , agregaremos un boton :    
+![image](https://github.com/peg1163/CC3S2/assets/92898224/d62cb0b3-0177-4953-a60f-c5bee412f8fd)
+vemos que en el lado del servidor el valor del boton es Eliminar lo cual diferenciaria los dos submit que pusimos 
+ ![image](https://github.com/peg1163/CC3S2/assets/92898224/124215fa-906b-4e88-96a8-87208e0d539b)
+
+ 
+ ¿Se puede enviar el formulario mediante GET en lugar de POST? En caso afirmativo, ¿cuál es la diferencia en cómo el servidor ve esas solicitudes?
+
+ Si se puede , la mayor diferencia es que los datos estaran adjuntos al URL , y que como el formulario ahora esta en GET estos lo tratara  de forma distinta que usando el metodo POST     
+ 
+ ![image](https://github.com/peg1163/CC3S2/assets/92898224/951d13fe-c2ce-4528-95a5-fcb7a609fedc)
+
+ ¿Qué otros verbos HTTP son posibles en la ruta de envío del formulario? ¿Puedes hacer que el navegador web genere una ruta que utilice PUT, PATCH o 
+  DELETE?.
+
+  Normalmente, los navegadores web generan solicitudes GET o POST al enviar formularios HTML. Para utilizar otros verbos HTTP como PUT, PATCH o DELETE en la ruta de envío del formulario, generalmente se requiere programación adicional utilizando JavaScript o frameworks de desarrollo web
+
+
+* Pregunta: Prueba las dos primeras operaciones GET anteriores. El cuerpo de la respuesta para la primera debe ser "Logged in: false" y para la segunda "Login cookie set". ¿Cuáles son las diferencias en los encabezados de respuesta que indican que la segunda operación está configurando una cookie? (Sugerencia: usa curl -v, que mostrará tanto los encabezados de solicitud como los encabezados y el cuerpo de la respuesta, junto con otra información de depuración. curl --help imprimirá una ayuda voluminosa para usar cURL y man curl mostrará la página del manual de Unix para cURL en la mayoría de los sistemas.)
+ejecutamos la primera opcion :
+
+![image](https://github.com/peg1163/CC3S2/assets/92898224/43f14fff-1f2f-4eeb-a0e1-e59b626b5c87)
+
+Ahora la segunda :    
+
+![image](https://github.com/peg1163/CC3S2/assets/92898224/ab9cbc71-8e91-49da-871a-14966f3e8fff)
+
+vemos que en la segunda se activa el login 
+
+* Pregunta: Bien, ahora supuestamente "logged in" porque el servidor configuró una cookie que indica esto. Sin embargo, si intentaa GET / nuevamente, seguirá diciendo "Logged: false". ¿Qué está sucediendo? (Sugerencia: usa curl -v y observa los encabezados de solicitud del cliente).
+
+Siguiendo los pasos :
+
+![image](https://github.com/peg1163/CC3S2/assets/92898224/74cd06c0-21b0-4d36-a8da-05e003f6f786)
+
+se genera un txt donde se guardara la cookie, ahora haremos que incluyas las cockies necesarias :
+
+![image](https://github.com/peg1163/CC3S2/assets/92898224/7c272cc0-3fd4-457e-bd90-585fc0df5a4b)
+
+
+
+
 
