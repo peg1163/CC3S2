@@ -53,14 +53,18 @@ Además, prueba el siguiente comando usando 'curl' para verificar que la aplicac
   curl http://localhost:4567/todos
 ```
 
-* Cuando ejecutamos el comando curl http://localhost:4567/todos, nos muestra lo siguiente:
+<details>
+<summary>Resultado</summary><p><blockquote> Cuando ejecutamos el comando curl http://localhost:4567/todos, nos muestra lo siguiente:
 
-    ![Alt text](image-4.png)
+![Alt text](image-4.png)
 
-    mientras que en el lado del servidor nos muestra lo siguiente:
+mientras que en el lado del servidor nos muestra lo siguiente:
 
-    ![Alt text](image-5.png)
-    
+![Alt text](image-5.png)
+</p></blockquote></details>
+
+
+
 En los siguientes ejercicios, agregaremos más rutas y podrás continuar usando comandos curl con diferentes argumentos para verificar la corrección de sus comportamientos.
 
 Objetivo: Tu tarea es implementar las partes del archivo denominado `TU CODIGO AQUI`. La referencia que contiene las soluciones se encuentra en el archivo `final.rb`.
