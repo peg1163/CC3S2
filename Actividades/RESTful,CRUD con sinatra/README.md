@@ -17,13 +17,18 @@ Presenta esta tarea individual en un repositorio llamado MVC-Restful, CRUD con e
   bundle install
   ruby template.rb # O: bundle exec ruby template.rb
 ```
-* Configurando y ejecutando el codigo template.rb
+<details>
+    <summary>Resultado</summary>
+    <p><blockquote> Configurando y ejecutando el codigo template.rb 
 
-    ![Alt text](image.png)
+![Alt text](image.png)
 
-    ejecutando template.rb
+ejecutando template.rb
 
-    ![Alt text](image-1.png)
+![Alt text](image-1.png)
+
+</blockquote></p>
+</details>
 
 
 Luego, ingresa el siguiente enlace en un navegador para ver la página web y verificar si está funcionando.
@@ -31,13 +36,16 @@ Luego, ingresa el siguiente enlace en un navegador para ver la página web y ver
 ```
   http://localhost:4567/todos
 ```
-* Cuando ingresamos a la ruta http://localhost:4567/todos, nos muestra la siguiente pagina:
+<details>
+<summary>Resultado</summary><p><blockquote>Cuando ingresamos a la ruta http://localhost:4567/todos, nos muestra la siguiente pagina:
 
-    ![Alt text](image-2.png)
+![Alt text](image-2.png)
 
-    mientras que en el lado del servidor nos muestra lo siguiente:
+mientras que en el lado del servidor nos muestra lo siguiente:
 
-    ![Alt text](image-3.png)
+![Alt text|300](image-3.png)
+
+</blockquote></p></details>
 
 Además, prueba el siguiente comando usando 'curl' para verificar que la aplicación se esté ejecutando localmente y responda. El comando activa una solicitud `GET` para recuperar la lista de "cosas por hacer" y debería recibir una respuesta que se muestra en la salida estándar de la línea de comando.
 
