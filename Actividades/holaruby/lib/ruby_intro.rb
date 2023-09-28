@@ -1,9 +1,8 @@
 # Parte 1
 
-def sum arr
+  def sum arr
     arr.inject(0, :+)
   end
-  
   def max_2_sum arr
     sorted_arr = arr.sort
     if sorted_arr.length >= 2

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_relative 'ruby_intro.rb'
+require_relative '../lib/ruby_intro.rb'
 require 'rspec'
 describe 'BookInStock' do
   it 'esto deberia ser definido' do

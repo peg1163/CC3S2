@@ -1,5 +1,5 @@
 # frozen_string_literal: true
-require_relative 'ruby_intro.rb'
+require_relative '../lib/ruby_intro.rb'
 require 'rspec'
 describe 'Introduccion a Ruby' do
   describe '#sum' do

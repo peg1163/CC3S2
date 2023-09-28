@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 require 'rspec'
-require_relative 'ruby_intro.rb'
+require_relative '../lib/ruby_intro.rb'
 
 describe '#hello' do
   it 'deberia ser definido' do
