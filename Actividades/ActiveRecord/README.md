@@ -11,4 +11,39 @@ Ahora que terminamos de ver los recursos para esta actividad , comenzaremos crea
 
 ![image](https://github.com/peg1163/CC3S2/assets/92898224/20ed804d-8a82-4186-8196-9c00776c53e5)
 
-Al quita el ' xspecify ' y poner ' specify '
+Al quita el ' xspecify ' y poner ' specify ' ejecutara solo la prueba dejando las demas como pendientes al ejecutar las pruebas veremos :
+
+![image](https://github.com/peg1163/CC3S2/assets/92898224/1e212230-5685-41ef-b5a8-5360d7daaa7e)
+
+Nos muestra un error ya que aun no hemos implementado el metodo 
+Implmentando el metodo : 
+
+![image](https://github.com/peg1163/CC3S2/assets/92898224/85921190-0f08-4e6b-88a5-fd26a49b7695)
+
+ejecutaremos el test nuevamente
+
+![image](https://github.com/peg1163/CC3S2/assets/92898224/c8fa72f1-7608-4163-a8d6-99774a5348b2)
+
+Vemos que pasa las pruebas , ahora generaremos los metodos para las demas pruebas , pero antes de eso utilizaremos la gema guard para automatizar la ejecucion de las pruebas : 
+
+![image](https://github.com/peg1163/CC3S2/assets/92898224/7af301d4-f8df-4be6-888f-f802937013ac)
+
+Asi mismo generaremos los metodos para las respectivas pruebas :
+
+![image](https://github.com/peg1163/CC3S2/assets/92898224/8fc2e456-002d-47df-859d-c571a6fb4418)
+ 
+![image](https://github.com/peg1163/CC3S2/assets/92898224/9484dc77-fc61-40c4-8b9b-bee49fb93dce)
+
+Quitaremos el xspecify y pondremos specify , guardaremos los cambios y se ejecutara el guard automaticamente: 
+
+![image](https://github.com/peg1163/CC3S2/assets/92898224/30a91b37-49ca-4c0c-bc37-f923b91b88e3)
+
+
+
+
+
+
+
+
+
+
