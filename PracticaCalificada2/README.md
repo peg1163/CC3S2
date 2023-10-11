@@ -59,6 +59,25 @@ Ahora si ejecutamos nuevamente el comando Movie.first dentro de la consola de ra
 
 ### Crear rutas, acciones y vistas CRUD para películas
 
+Si ejecutamos el programa nuevamente veremos que muestra el logo visto anteriormente pero si intentamos entrar en una direccion /movies , nos genera un error .
+
+![image](https://github.com/peg1163/CC3S2/assets/92898224/75a45766-012c-4304-8230-415b30f982f0)
+
+esto sucede porque no hemos especificado en el programa que es lo que queremos mostrar cuando ingresamos a la direccion /movies para esto configuraremos config/routes dentro de nuestra aplicacion :
+
+![image](https://github.com/peg1163/CC3S2/assets/92898224/c7ca9380-730d-4e82-9f25-3fe79c790dce)
+
+
+#### Crear acciones y vistas
+
+Con el comando rails g scaffold_controller Movie title rating description release_date --skip-test creamos los recursos necesarios para controlar las vistas .
+
+![image](https://github.com/peg1163/CC3S2/assets/92898224/019bc583-8eaf-4166-ba5e-9a86280f2820)
+
+si volvemos a ejecutar el programa y nos vamos a la direccion /movies veremos los elementos que ingresamos en la base de datos
+
+![image](https://github.com/peg1163/CC3S2/assets/92898224/b37abfe2-8d9a-4472-b5d9-18de9661132b)
+
 
 
 
