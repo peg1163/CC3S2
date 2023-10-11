@@ -14,4 +14,54 @@ Verificamos que la instalacion sea correcta ejecutandola localmente :
 
 ![image](https://github.com/peg1163/CC3S2/assets/92898224/953b5141-6e2e-4b95-a922-00562ab5c430)
 
+### Migraciones :
+Crearemos una migracion para controlar los cambios en la estructura de la base de datos .
+Ejecutamos el comando rails generate migration create_movies :   
+
+![image](https://github.com/peg1163/CC3S2/assets/92898224/6767bce0-9b14-45c0-ba3d-822fbdc59e06)
+
+La imagen anterior nos dice que se ha creado un archivo para la migracion llamado CreateMovies ,inicialmente este tiene la sig estructura :  
+
+![image](https://github.com/peg1163/CC3S2/assets/92898224/95eb21fe-ff29-48ef-ab19-c22215fbe42a)
+
+Crearemos la tabla para este migracion con el comando rails db:migrate :
+
+![image](https://github.com/peg1163/CC3S2/assets/92898224/c577b2fb-6ab0-41bc-b4db-65ad165cdc52)
+
+
+Agregando las lineas de codigo mostradas en la practica  :  
+
+![image](https://github.com/peg1163/CC3S2/assets/92898224/d905332d-c901-4bba-a3d1-70f844ae043c)
+
+### Crea el modelo inicial e inicializa la base de datos  
+
+Crearemos un modelo "movie" :   
+
+![image](https://github.com/peg1163/CC3S2/assets/92898224/0984ff80-2e41-4199-a661-e731d0d70438)
+
+si entramos a la consola de rails y ejecutamos Movie.new nos da el sig resultado :
+
+![image](https://github.com/peg1163/CC3S2/assets/92898224/ba42435f-a526-4449-b4f4-1c29b89d9c40)
+
+Vemos que aun no han sido guardadas peliculas por eso el resultado de nulo  en la imagen anterior , y lo comprobaremos ejecutanto Movie.first que nos devuleve el primer dato de la base de datos :
+
+![image](https://github.com/peg1163/CC3S2/assets/92898224/5e37fcb7-23b3-4114-adf9-62ba83fb10c2)  
+
+Para poder agregar datos a la base de datos , ingresaremos los datos seeds que esta dentro de db , ingresando los datos necesarios y un comando final , lo ejecutaremos :
+
+![image](https://github.com/peg1163/CC3S2/assets/92898224/765b1f25-d8ca-4c31-b724-eb34abad2dd4)
+
+![image](https://github.com/peg1163/CC3S2/assets/92898224/c4f087df-db4b-46c0-bd9d-7eec778a0d0f)
+
+Ahora si ejecutamos nuevamente el comando Movie.first dentro de la consola de rails veremos  :  
+
+![image](https://github.com/peg1163/CC3S2/assets/92898224/11decacf-d769-4e46-bdc4-dac36751a1b7)
+
+### Crear rutas, acciones y vistas CRUD para películas
+
+
+
+
+
+
 
