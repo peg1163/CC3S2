@@ -78,7 +78,7 @@ si volvemos a ejecutar el programa y nos vamos a la direccion /movies veremos lo
 
 ![image](https://github.com/peg1163/CC3S2/assets/92898224/b37abfe2-8d9a-4472-b5d9-18de9661132b)
 
-Como vemos esta aplicacion logra levantarse de manera local , lamentablemente alguno smotivos no se pudo subir a heroku .
+Como vemos esta aplicacion logra levantarse de manera local , lamentablemente algunos motivos no se pudo subir a heroku .
 
 
 
