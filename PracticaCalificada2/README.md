@@ -1,4 +1,21 @@
 # Practica calificada  2:
+## Parte 1 :
+
+### Problema 1 :
+
+La funcinalidad del primer programa seria , generaremos un arreglo que tenga las letras del abecerario , mientras leamos la frase ingresada , se iran eliminando las letras que coincidan con el abecerario , entonces quedara con las letras que no se encuentran en la frase , probando con frase de ejemplo :
+
+![image](https://github.com/peg1163/CC3S2/assets/92898224/cd67fab0-4f2e-4cce-9e79-e8b5426887d3)
+
+### Problema 2 : 
+
+Crearemos la clase BinaryTree , con los atributos , valor ,hijo_izquierdo,hijo_derecho 
+en el constructor haremos que se ingrese el atributo "valor" y definiremos los hijos del nodo como nulos .
+El metodo pos :posicionara un nodo ingresado teniendo encuenta el primer valor ingresado en el constructor , y asi , si se ingresa un numero mayor , se pondra en el lado derecho del valor pero si es menor se  ira al izquierdo
+El metodo empty? :simplemente devolvera true si este grafo no tiene valor a la derecha ni a la izquierda  
+
+![image](https://github.com/peg1163/CC3S2/assets/92898224/faf7b15a-faf1-470a-bee9-0f61bdd3d7ff)
+
 ## Parte 3 :
 Verificamos las versiones de las gemas que tenemos y creamos la aplicacion con rails :
 
