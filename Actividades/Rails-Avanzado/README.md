@@ -84,5 +84,11 @@ Entendamos el siguiente codigo :
 Este controlador vera cada uno de los botones que se ven el la primera tabla , este se encargara de direccionar los diferentes casos , por ejemplo si se 
 quiere agregar alguna pelicula o si se quiere modificar alguna caracteristica , tambien si se quiere eliminar .
 
+Comprobaremos si funciona la canonicalizacion :
+
+![image](https://github.com/peg1163/CC3S2/assets/92898224/9ea7d513-ff94-4f14-93dd-83c34ca8a972)
+
+
+
 
 
