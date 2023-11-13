@@ -1,4 +1,5 @@
 #Errores iniciales
+
 Los primeros errores que encontramos en el codigo se encuentra en la carpeta app/controller/ en el archivo aplication controller en donde llamamos 
 a un metodo de la clase Moviegoer , donde no existe esta clase , por lo que cambiaremos esta a la clase Movie .
 
