@@ -88,7 +88,38 @@ Comprobaremos si funciona la canonicalizacion :
 
 ![image](https://github.com/peg1163/CC3S2/assets/92898224/9ea7d513-ff94-4f14-93dd-83c34ca8a972)
 
+# SSO y autenticación a través de tercer 
+Para este paso crearemos un nuevo modelo :
 
+![image](https://github.com/peg1163/CC3S2/assets/92898224/b86befad-c00c-44a6-9230-4b5c89a8eeb0)
+
+ya creado modificamos el codigo para que tenga la siguiente forma :
+
+
+![image](https://github.com/peg1163/CC3S2/assets/92898224/6159849a-f644-4e00-ae3b-8b34a19fbec6)
+
+Ahora ejecutaremos rake db:migrate para que se ejcute la migracion :
+
+![image](https://github.com/peg1163/CC3S2/assets/92898224/e427c4e6-345f-4df0-b892-50fc67a4a984)
+
+
+Ahora comenzaremos preparando los codigos para poder utilzar una API , primero generaremos un controlador con el comando
+rails generate controller SessionsControlller
+
+![image](https://github.com/peg1163/CC3S2/assets/92898224/975a70b1-b6d0-4af0-b1a0-b9539f10e59e)
+
+luego rellenamos codigo en este nuevo controlador :
+
+![image](https://github.com/peg1163/CC3S2/assets/92898224/84316e36-47aa-41f6-8ea8-af157da64079)
+
+# Asociaciones y claves foráneas 
+
+El siguiente codigo hace que , seleccione los elementos de la tabla review que se encuentra dentro de la union de la tabla movies y reviews , esta tabla fue generada con ciertas condiciones  , 
+las cuales son que el id de movies y el movie_id sean iguales , donde este id debe ser 41 
+        
+        SELECT reviews.*
+    FROM movies JOIN reviews ON movies.id=reviews.movie_id
+    WHERE movies.id = 41;
 
 
 
