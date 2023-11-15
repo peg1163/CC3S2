@@ -28,7 +28,7 @@ class BinaryTree
 
   end
   def empty? #este metodo devolvera true si el arbol esta vacio
-    return @hijo_izquierdo.nil? && @hijo_derecho.nil?
+    return  @hijo_izquierdo.nil? && @hijo_derecho.nil?
   end
 end
 def each
