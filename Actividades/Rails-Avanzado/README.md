@@ -112,6 +112,25 @@ luego rellenamos codigo en este nuevo controlador :
 
 ![image](https://github.com/peg1163/CC3S2/assets/92898224/84316e36-47aa-41f6-8ea8-af157da64079)
 
+Con ayuda de la gema OmniAuth autenticaremos el usuario de un tercero , haremos unas modificaciones en el archivo routes.rb 
+
+![image](https://github.com/peg1163/CC3S2/assets/92898224/5ef8c5e2-f677-4f23-9985-44f55cc486c0)
+
+Adicionalmente aumentaremos un controlador para gestionar el manejo de sesiones :
+
+![image](https://github.com/peg1163/CC3S2/assets/92898224/0acc3b8d-1342-4b8d-8da7-29b406534194)
+
+Finalmente usaremos una API ,para poder tener acceso a esta API necesitaremos una API key y una API key secret 
+
+Dentro de config/initializers/ crearemos un archivo omniauth.rb , en donde especificaremos quien es le proveedor de la API y tambien las keys para poder acceder a esta .
+
+![image](https://github.com/peg1163/CC3S2/assets/92898224/2631253f-d7a7-4f9f-862d-ad6a282422a8)
+
+* Pregunta: Debes tener cuidado para evitar crear una vulnerabilidad de seguridad. ¿Qué sucede si un atacante malintencionado crea un envío de formulario que intenta modificar params[:moviegoer][:uid] o params[:moviegoer][:provider] (campos que solo deben modificarse mediante la lógica de autenticación) publicando campos de formulario ocultos denominados params[moviegoer][uid] y así sucesivamente?
+
+si se vulnerara la seguridad de este formulario por ejemplo , con el caso de estos parametros , el atacante podria hacerse pasar por otro usuario haciendo cambios o acciones no autorizadas con el nombre de este usuario , para evitar este tipo de vulnerabilidaes es que usamos la autenticacion de usuarios atravez de un tercero , en nuestro caso usamos la gema omniauth 
+
+
 # Asociaciones y claves foráneas 
 
 El siguiente codigo hace que , seleccione los elementos de la tabla review que se encuentra dentro de la union de la tabla movies y reviews , esta tabla fue generada con ciertas condiciones  , 
@@ -120,6 +139,80 @@ las cuales son que el id de movies y el movie_id sean iguales , donde este id de
         SELECT reviews.*
     FROM movies JOIN reviews ON movies.id=reviews.movie_id
     WHERE movies.id = 41;
+
+Generaremos algunas asociaciones pero para esto necesitaremos algunos modelos y migraciones , comenzaremos creando la tabla review , para esto ejecutamos el comando 
+rails generate migration create_reviews
+
+![image](https://github.com/peg1163/CC3S2/assets/92898224/07002ae0-58fc-42cd-8a39-9661aca9b7ef)
+
+Ahora modificaremos esta migracion para que luzca de esta forma 
+       ```
+        class CreateReviews < ActiveRecord::Migration
+            def change
+                create_table 'reviews' do |t|
+                t.integer    'potatoes'
+                t.text       'comments'
+                t.references 'moviegoer'
+                t.references 'movie'
+                end
+            end
+        end
+        ```
+![image](https://github.com/peg1163/CC3S2/assets/92898224/ba551fe7-9eae-427c-81e2-e512e67b43c4)
+
+
+Asi mismo crearemos un modelo review :
+
+![image](https://github.com/peg1163/CC3S2/assets/92898224/ee952e3c-384a-4504-a81f-adcfbc1e5992)
+
+solo nos faltaria asociar la clase movie y moviegoer a review , para esto agregaremos la linea has_many :reviews en ambas clases 
+
+![image](https://github.com/peg1163/CC3S2/assets/92898224/6fc6b9da-90b1-49bb-af2d-a88a25af2bb0)
+
+![image](https://github.com/peg1163/CC3S2/assets/92898224/d2b01dca-d44f-4567-a76f-40b3dbd9cc41)
+
+
+Una vez generada las asociaciones , podemos ingresar los comandos :
+
+        # it would be nice if we could do this:
+        inception = Movie.where(:title => 'Inception')
+        alice,bob = Moviegoer.find(alice_id, bob_id)
+        # alice likes Inception, bob less so
+        alice_review = Review.new(:potatoes => 5)
+        bob_review   = Review.new(:potatoes => 3)
+        # a movie has many reviews:
+        inception.reviews = [alice_review, bob_review]
+        # a moviegoer has many reviews:
+        alice.reviews << alice_review
+        bob.reviews << bob_review
+        # can we find out who wrote each review?
+        inception.reviews.map { |r| r.moviegoer.name } # => ['alice','bob']    
+
+Comencemos con inception = Movie.where(:title => 'Inception') :
+
+![image](https://github.com/peg1163/CC3S2/assets/92898224/cc4c612e-821d-417d-8ce9-f06be7429d3f)
+
+como vemos funciona correctamente 
+
+Sigamos con el siguiente comando :
+
+![image](https://github.com/peg1163/CC3S2/assets/92898224/7f595996-b983-488e-b7a7-c5ccfafaead7)
+
+observamos que hay un error , ya que queremos asignar elementos de la tabla moviegoer , pero esta esa vacia , aparte de esto no sabemos los valores de alice_id y bob_id , por lo que para crearlos usamos lo siguiente :
+
+![image](https://github.com/peg1163/CC3S2/assets/92898224/0876bfb8-7693-4a26-8888-76945c4dea2e)
+
+ya creados podemos seguir con los comandos mostrados , seria el turno de :alice_review = Review.new(:potatoes => 5) y bob_review   = Review.new(:potatoes => 3) 
+
+![image](https://github.com/peg1163/CC3S2/assets/92898224/f67c0c90-eac2-43c7-97c1-8f430a763afc)
+
+Ahora asociaremos inception con las reviews 
+
+![image](https://github.com/peg1163/CC3S2/assets/92898224/aa27b973-7b4e-49e6-84af-ef53b3274c8b)
+
+
+
+
 
 
 
