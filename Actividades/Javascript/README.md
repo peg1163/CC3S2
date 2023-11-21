@@ -194,4 +194,86 @@ function containsX(string) {
   return string.includes("X");
 }
 ```
+Escribiremos una funcion que devuelva el primer caracter no duplicado de una cadena 
+
+```javascript
+function firstcaracter(string){
+    for(let i=0;i<string.length;i++){
+        if(string.indexOf(string[i])===string.lastIndexOf(string[i])){
+            return string[i];
+        }
+    }
+    return null;
+}
+```
+si revisamos el codigo , recorre el arreglo , y usando indexof y lastindexof , los cuales nos dan la posicion de la primera aparicion del elemento y la ultima , si estas dos son iguales entonces significa que el elemento no se repite a lo cual retorna dicho elemento , si no , retorna null , como esta recorre el arrelgo 1 vez entonces tiene complejidad O(N)
+
+### Clases 
+
+Diseñaremos 2 clases , una llamada "Pokemon" y otra llamada "Charizard" , estas clases deben cumplir : 
+Clase Pokémon:  
+
+* El constructor toma 3 parámetros (HP, ataque, defensa)    
+* El constructor debe crear 6 campos (HP, ataque, defensa, movimiento, nivel, tipo). Los valores de (mover, nivelar, tipo) debe inicializarse en ("", 1, "").   
+* Implementa un método flight que arroje un error que indique que no se especifica ningún movimiento.   
+* Implementa un método canFly que verifica si se especifica un tipo. Si no, arroja un error. Si es así, verifica si el tipo incluye "volar". En caso afirmativo, devuelve verdadero; si no, devuelve falso.     
+
+Clase Charizard:
+
+* El constructor toma 4 parámetros (HP, ataque, defensa, movimiento)    
+* El constructor configura el movimiento y el tipo (para "disparar/volar") además de establecer HP, ataque y defensa como el constructor de superclase. 
+* Sobreescribe el método fight. Si se especifica un movimiento, imprime una declaración que indique que se está utilizando el movimiento y devuelve el campo de ataque. Si no, arroja un error. 
+
+```javascript
+class Pokemon {
+    constructor(HP, ataque, defensa) {
+        this.HP = HP;
+        this.ataque = ataque;
+        this.defensa = defensa;
+        this.movimiento = "";
+        this.nivel = 1;
+        this.tipo = "";
+    }
+
+    fight() {
+        throw new Error("No se especificó ningún movimiento");
+    }
+
+    canFly() {
+        if (this.tipo === "") {
+            throw new Error("No se especificó ningún tipo");
+        } else {
+            return this.tipo.includes("volar");
+        }
+    }
+}
+
+class Charizard extends Pokemon {
+    constructor(HP, ataque, defensa, movimiento) {
+        super(HP, ataque, defensa);
+        this.movimiento = movimiento;
+        this.tipo = "disparar/volar";
+    }
+
+    fight() {
+        if (this.movimiento === "") {
+            throw new Error("No se especificó ningún movimiento");
+        } else {
+            console.log(`Se está usando el movimiento ${this.movimiento}`);
+            return this.ataque;
+        }
+    }
+}
+```
+Aqui vemos como aplicamos todos los requerimientos mencionados , ahora el codigo aplicado con los valores que nos dan en el enunciado :
+
+```javascript
+let charizard = new Charizard(100, 50, 30, "lanzar fuego");
+try {
+    console.log(charizard.canFly());
+    console.log(charizard.fight());
+} catch (error) {
+    console.error(error.message);
+}
+```
 
